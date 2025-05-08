@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opções de Pagamento</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; padding: 0; margin: 0; }
+    body { font-family: 'Montserrat', sans-serif; background-color: #fdf5ff; padding: 40px 20px; text-align: center; }
+    h1 { font-size: 36px; font-weight: 600; margin-bottom: 48px; }
+    .cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; margin-bottom: 48px; }
+    .card { background: white; border-radius: 16px; padding: 24px; width: 300px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); text-align: center; }
+    .card img { max-width: 100%; height: auto; margin-bottom: 16px; }
+    .card h2 { font-size: 20px; font-weight: 600; color: #A855F7; margin-bottom: 16px; }
+    .card p { font-size: 24px; font-weight: 400; color: #4b4b4b; margin-bottom: 8px; }
+    .button { background-color: #A855F7; color: white; border: none; font-size: 20px; padding: 12px 48px; border-radius: 24px; cursor: pointer; font-weight: 600; }
+    .button:hover { background-color: #9333EA; }
+  </style>
+</head>
+<body>
+  <h1>Quando o entregador chegar no seu endereço, essas serão as seguintes opções de pagamento:</h1>
+  <div class="cards">
+    <div class="card">
+      <img src="Credit Card.png" alt="Cartão">
+      <h2>Cartão de Débito e Crédito</h2>
+      <p>entregador levará uma maquininha para que você possa inserir ou aproximar seu cartão e digitar sua senha.</p>
+      <p>Aceitamos as principais bandeiras como <strong>Visa</strong>, <strong>Mastercard</strong>, <strong>Elo</strong>, entre outras.</p>
+    </div>
+    <div class="card">
+      <img src="Money.png" alt="Dinheiro">
+      <h2>Dinheiro</h2>
+      <p>Se preferir pagar em dinheiro, é só entregar o valor diretamente ao entregador.</p>
+      <p>Ah! Se precisar de troco, tente avisar no campo de observação do pedido para que ele leve o valor certinho.</p>
+    </div>
+    <div class="card">
+      <img src="Pix.png" alt="Pix">
+      <h2>Pix</h2>
+      <p>O entregador mostrará um QR Code ou chave Pix para que você possa fazer a transferência na hora.</p>
+      <p>Você usa o aplicativo do seu banco para escanear o código e confirmar o pagamento rapidinho.</p>
+    </div>
+  </div>
+  <button class="button">Finalizar</button>
+</body>
+</html>
