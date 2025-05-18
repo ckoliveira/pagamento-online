@@ -3,10 +3,10 @@ function selectOption() {
 
     switch (paymentModeSelected) {
         case "online-payment":
-            window.location.href = '../pages/tela3.html';
+            window.location.href = '/pagamento-online/pages/tela3.html';
             break;
         case "delivery-payment":
-            window.location.href = '../pages/delivery-payment-processing.html';
+            window.location.href = '/pagamento-online/pages/delivery-payment-processing.html';
             break;
     }
 }
