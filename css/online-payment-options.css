@@ -1,8 +1,5 @@
 .container {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    margin: 2rem auto;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -16,3 +13,119 @@
     justify-content: center;
     align-items: center;
 }
+
+.selected-payment-option {
+    margin: 5rem auto;
+    max-width: max-content;
+    max-height: max-content;
+    background-color: rgb(233, 233, 233);
+    border-radius: 10px;
+}
+
+.card-payment, 
+.card-payment div,
+.pix-payment,
+.pix-payment div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.card-payment,
+.pix-payment {
+    padding: 1rem;
+    gap: 20px;
+    align-items: center;
+}
+
+.card-payment div,
+.pix-payment div {
+    position: relative;
+}
+
+.selected-payment-option label {
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    background-color: rgb(233, 233, 233);
+    font-weight: 500;
+}
+
+.selected-payment-option input {
+    width: 300px;
+    height: 30px;
+    padding: 1.1rem;   
+}
+
+
+.selected-payment-option input:focus,
+.selected-payment-option input:active {
+    border-color: #a84fd8;
+    outline: none;
+}
+
+.selected-payment-option h3 {
+    margin-bottom: 1.5rem;
+}
+
+.selected-payment-option button {
+    margin-top: 2rem;
+}
+
+.payment-option {
+    color: #a84fd8;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+.cvv-explanation {
+    position: absolute;
+    left: 300px;
+    top: 10px;
+    margin-left: 0.5rem;
+    width: max-content;
+    color: #a84fd8;
+    font-weight: bold;
+    cursor: help;
+    animation: glowHelpText 2s linear infinite alternate;
+}
+
+@keyframes glowHelpText {
+    0% {
+        color: black;
+    } 50% {
+        color: #a84fd8;
+    } 100% {
+        color: black;
+    }
+}
+
+.cvv-explanation:hover::before {
+    position: absolute;
+    content: "CVV (ou código de segurança) é um número, que pode ser de 3 ou 4 digitos, achados na parte de tras do cartão, perto da validade";
+    left: 150px;
+    color: black;
+    font-weight: normal;
+    width: 300px;
+    text-align: left;
+}
+
+.pix-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.pix-qr-code {
+    flex: 1;
+    width: 70%;
+}
+
+.pix-text-code {
+    flex: 1;
+    background-color: rgb(235, 235, 235);
+    font-size: 1.6em;
+    width: 100px;
+    word-wrap: break-word;
+}
+
