@@ -32,3 +32,34 @@ function getButtonText(value) {
             ? "Seguir com Pagamento na Entrega" 
             : "Seguir com Pagamento Online";
 }
+
+function showOptions() {
+  const options = [
+    {
+      name: "online-payment",
+      img_path: "assets/online-payment.png",
+      alt: "online payment",
+      checked: true
+    },
+    {
+      name: "delivery-payment",
+      img_path: "assets/delivery-payment.png",
+      alt: "delivery payment",
+      checked: false
+    }
+  ]
+
+  const optionsBody = options.map(o => PaymentModeOption(o)).join("");
+
+  document.querySelector(".options").innerHTML = optionsBody;
+}
+
+const PaymentModeOption = ({name, img_path, alt, checked}) => `
+  <div class="option">
+    <label for="${name}">
+    <img src="${img_path}" alt="${alt}" />
+    </label>
+    
+    <input type="radio" name="payment-mode" id="${name}" value="${name}" ${checked ? "checked" : ""}/>
+  </div>
+`
