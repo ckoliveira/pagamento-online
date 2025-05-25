@@ -33,7 +33,7 @@ function getButtonText(value) {
             : "Seguir com Pagamento Online";
 }
 
-function showOptions() {
+function showPaymentModes() {
   const options = [
     {
       name: "online-payment",
