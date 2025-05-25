@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +9,7 @@
     <link href="../css/main.css" rel="stylesheet" type="text/css">
     <link href="../css/online-payment-options.css" rel="stylesheet" type="text/css">
 
-    <script src="../pagamento.js" type="text/javascript"></script>
+    <script src="../js/online-payment-options.js" type="text/javascript"></script>
 </head>
 <body>
 
@@ -17,10 +18,11 @@
         <p>Escolha sua forma de pagamento preferida</p>
         <div class="wrapper">
             <button onclick='selectOnlinePaymentOption("pix")'> Pix </button>
-            <button onclick='selectOnlinePaymentOption("debito")'> Debito </button>
-            <button onclick='selectOnlinePaymentOption("credito")'> Credito </button>
+            <button onclick='selectOnlinePaymentOption("card")'> Debito </button>
+            <button onclick='selectOnlinePaymentOption("card")'> Credito </button>
         </div>
     </div>
-    
+
+    <div class="selected-payment-option"></div> 
 </body>
 </html>
