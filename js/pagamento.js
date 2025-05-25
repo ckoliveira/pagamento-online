@@ -3,7 +3,7 @@ function selectOption() {
 
     switch (paymentModeSelected) {
         case "online-payment":
-            window.location.href = 'pages/tela3.html';
+            window.location.href = 'pages/online-payment-options.html';
             break;
         case "delivery-payment":
             window.location.href = 'pages/delivery-payment-processing.html';
@@ -32,3 +32,34 @@ function getButtonText(value) {
             ? "Seguir com Pagamento na Entrega" 
             : "Seguir com Pagamento Online";
 }
+
+function showPaymentModes() {
+  const options = [
+    {
+      name: "online-payment",
+      img_path: "assets/online-payment.png",
+      alt: "online payment",
+      checked: true
+    },
+    {
+      name: "delivery-payment",
+      img_path: "assets/delivery-payment.png",
+      alt: "delivery payment",
+      checked: false
+    }
+  ]
+
+  const optionsBody = options.map(o => PaymentModeOption(o)).join("");
+
+  document.querySelector(".options").innerHTML = optionsBody;
+}
+
+const PaymentModeOption = ({name, img_path, alt, checked}) => `
+  <div class="option">
+    <label for="${name}">
+    <img src="${img_path}" alt="${alt}" />
+    </label>
+    
+    <input type="radio" name="payment-mode" id="${name}" value="${name}" ${checked ? "checked" : ""}/>
+  </div>
+`

@@ -8,32 +8,20 @@
     
     <link href="css/index.css" rel="stylesheet" type="text/css" />
     <link href="css/main.css" rel="stylesheet" type="text/css" />
-    <script src="pagamento.js" type="text/javascript"></script>
+
+    <script src="js/pagamento.js" type="text/javascript"></script>
   </head>
 
   <body>
     <h1>Como você prefere pagar?</h1>
     <p>Pagamento online para maior agilidade, ou na entrega para mais praticidade</p>
 
-    <div class="options">
-      <div class="option">
-        <label for="online-payment">
-          <img src="assets/online-payment.png" alt="online payment" />
-        </label>
-        <input type="radio" name="payment-mode" id="online-payment" value="online-payment" checked/>
-      </div>
-      
-      <div class="option">
-        <label for="delivery-payment">
-          <img src="assets/delivery-payment.png" alt="delivery payment" />
-        </label>
-        <input type="radio" name="payment-mode" id="delivery-payment" value="delivery-payment"/>
-      </div>
-    </div>
+    <div class="options"></div>
 
     <button class="button" onclick="selectOption()" id="payment-mode-selector"></button>
     
     <script>
+      showPaymentModes();
       initialize();
     </script>
   </body>
