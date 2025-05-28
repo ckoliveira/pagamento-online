@@ -10,12 +10,13 @@
   <link href="../css/payment-options.css" rel="stylesheet" type="text/css">
 
   <script src="../js/payment-options.js" type="text/javascript"></script>
+  <script src="../js/online-payment-options.js" type="text/javascript"></script>
 
 </head>
 <body>
   <h1>Quando o entregador chegar no seu endereço, essas serão as seguintes opções de pagamento:</h1>
   <div class="cards"></div>
-  <button class="button">Finalizar</button>
+  <button class="button" onclick="completePayment()">Finalizar</button>
 
   <script>
     showPaymentOptions();
