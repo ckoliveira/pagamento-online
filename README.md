@@ -24,10 +24,11 @@ Este projeto simula um sistema de **pagamento online e na entrega**, permitindo 
 - CSS3
 - JavaScript
 
-## Como rodar o projeto localmente
+## 💻 Como rodar o projeto localmente
 
 É possivel rodar o projeto localmente fazendo o clone do repositorio localmente e rodando um servidor local com o `python`: 
-   - Rode o seguinter codigo apartir do diretorio raiz do projeto: `python -m http.server`
+   - Rode o seguinte codigo apartir do diretorio raiz do projeto: `python -m http.server`
+   - Depois disso é so acessar o projeto pelo link `http://[::]:8000/`
 
 ## 🧭 Como usar
 
